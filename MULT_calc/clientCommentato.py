@@ -15,7 +15,7 @@ OPERAZIONI = ["+", "-", "*", "/", "%"]  # Lista delle operazioni consentite
 
 #1 funzione che generera le richieste da mandare al server
 def genera_richieste(address, port):
-    #2 creazione socket con with
+    #2 stabilimento connessione TCP con il server
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock_service:
         sock_service.connect((address, port))  # Connessione al server
 
